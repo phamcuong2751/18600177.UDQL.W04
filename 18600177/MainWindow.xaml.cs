@@ -32,16 +32,16 @@ namespace _18600177
 
             if (_username.Length == 0 && _password.Length == 0)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu khônng được để trống!");
+                MessageBox.Show("Username or password do not empty!");
             }
             if (_username != "admin")
             {
-                MessageBox.Show("Tên đăng nhập không tồn tại!");
+                MessageBox.Show("Username do not already exist!");
                 return;
             }
             if (_password != "qwe3@1")
             {
-                MessageBox.Show("Mật khẩu chưa đúng!");
+                MessageBox.Show("Password invalid!");
                 return;
             }
             if (_username == "admin" && _password == "qwe3@1")

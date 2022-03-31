@@ -10,6 +10,9 @@
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="15"/>
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+        </Style>
         <Style TargetType="DockPanel">
             <Setter Property="Margin" Value="0 20 0 0"/>
         </Style>
@@ -27,19 +30,19 @@
     </Window.Resources>
     
     <StackPanel VerticalAlignment="Center" >
-        <TextBlock Text="Đăng Nhập" HorizontalAlignment="Center"
+        <TextBlock Text="Welcome" HorizontalAlignment="Center"
                    FontSize="20" FontWeight="Bold"/>
         <DockPanel HorizontalAlignment="Center" Width="300">
-            <TextBlock Text="Tên đăng nhập"/>
+            <Label Content="_Username:" Target="{Binding ElementName=username}" />
             <TextBox Name="username" Width="180" HorizontalAlignment="Right"/>
         </DockPanel>
         <DockPanel HorizontalAlignment="Center" 
                        Width="300">
-            <TextBlock Text="Mật khẩu"/>
+            <Label Content="_Password:" Target="{Binding ElementName=password}" />
             <PasswordBox Name="password" Width="180" HorizontalAlignment="Right"/>
         </DockPanel>
 
-        <Button Content="Đăng nhập" Click="login_click"></Button>
+        <Button Content="Login" Click="login_click" IsDefault="True"></Button>
     </StackPanel>
 
 </Window>
